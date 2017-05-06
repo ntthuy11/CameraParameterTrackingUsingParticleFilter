@@ -1,0 +1,252 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\My081226_camera_param_PF.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\081226_camera_param_PF.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MY081226_CAMERA_PARAM_PF_DIALOG DIALOGEX 0, 0, 510, 186
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "081226_camera_param_PF"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "1. Capture Img wrt parameters",IDC_STATIC,7,7,115,60
+    CONTROL         "Exposure",IDC_CHECK_CAPTURE_IMG_IS_EXPOSURE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,22,46,10
+    CONTROL         "Focus",IDC_CHECK_CAPTURE_IMG_IS_FOCUS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,35,35,10
+    LTEXT           "Time:",IDC_STATIC,16,51,18,8
+    CTEXT           "-1",IDC_STATIC_CAPTURE_IMG_TIME,41,51,24,8
+    LTEXT           "ms",IDC_STATIC,76,51,10,8
+    PUSHBUTTON      "Capture",IDC_BUTTON_CAPTURE_IMG,69,27,42,14
+    GROUPBOX        "2. Measure using Entropy of 1st derivative img",IDC_STATIC,127,29,205,150
+    LTEXT           "Img set:",IDC_STATIC,129,12,28,8
+    COMBOBOX        IDC_COMBO_IMG_SET,158,10,127,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Scan all",IDC_STATIC,134,44,38,34
+    GROUPBOX        "Local maxima",IDC_STATIC,176,44,86,89
+    LTEXT           "Result img:",IDC_STATIC,151,140,36,8
+    LTEXT           "Result entropy:",IDC_STATIC,137,152,51,8
+    LTEXT           "-1",IDC_STATIC_MEASURE_ENTROPY_SCAN_ALL_IMG,195,140,29,8
+    LTEXT           "-1",IDC_STATIC_MEASURE_ENTROPY_SCAN_ALL_ENTROPY,195,152,29,8
+    PUSHBUTTON      "Scan",IDC_BUTTON_MEASURE_ENTROPY_SCAN_ALL,139,57,27,16
+    LTEXT           "WinH:",IDC_STATIC,208,58,20,8
+    LTEXT           "WinW:",IDC_STATIC,206,72,22,8
+    EDITTEXT        IDC_EDIT_MEASURE_ENTROPY_LOCAL_MAXIMA_WIN_HEIGHT,231,55,23,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_MEASURE_ENTROPY_LOCAL_MAXIMA_WIN_WIDTH,231,69,23,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Scan",IDC_BUTTON_MEASURE_ENTROPY_LOCAL_MAXIMA,183,113,72,14
+    GROUPBOX        "LMax - Random",IDC_STATIC,265,45,61,61
+    PUSHBUTTON      "Scan",IDC_BUTTON_MEASURE_ENTROPY_LOCAL_MAXIMA2,272,86,49,15
+    LTEXT           "Num. random:",IDC_STATIC,273,58,46,8
+    EDITTEXT        IDC_EDIT_MEASURE_ENTROPY_LOCAL_MAXIMA_RANDOM_NUM,295,68,23,14,ES_AUTOHSCROLL
+    LTEXT           "Time:",IDC_STATIC,169,164,18,8
+    LTEXT           "-1",IDC_STATIC_MEASURE_ENTROPY_TIME,195,164,24,8
+    LTEXT           "ms",IDC_STATIC,224,164,10,8
+    GROUPBOX        "3. Particle Filter",IDC_STATIC,7,72,115,107
+    PUSHBUTTON      "Quit",IDC_BUTTON_QUIT,469,165,34,14
+    LTEXT           "Center_exp:",IDC_STATIC,187,85,42,8
+    LTEXT           "Center_focus:",IDC_STATIC,182,98,47,8
+    EDITTEXT        IDC_EDIT_MEASURE_ENTROPY_LOCAL_MAXIMA_CENTER_EXP,231,82,23,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_MEASURE_ENTROPY_LOCAL_MAXIMA_CENTER_FOCUS,231,95,23,14,ES_AUTOHSCROLL
+    LTEXT           "Num. particles:",IDC_STATIC,15,110,49,8
+    EDITTEXT        IDC_EDIT_PF_NUM,65,108,23,14,ES_AUTOHSCROLL
+    LTEXT           "Position SIGMA:",IDC_STATIC,13,124,52,8
+    EDITTEXT        IDC_EDIT_PF_POSITION_SIGMA,65,121,23,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PF_VELOCITY_SIGMA,65,134,23,14,ES_AUTOHSCROLL
+    LTEXT           "Velocity SIGMA:",IDC_STATIC,13,138,52,8
+    PUSHBUTTON      "Run",IDC_BUTTON_PF_RUN,91,81,27,67
+    LTEXT           "Init exp:",IDC_STATIC,35,84,28,8
+    LTEXT           "Init focus:",IDC_STATIC,30,97,34,8
+    EDITTEXT        IDC_EDIT_PF_INIT_EXP,65,82,23,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PF_INIT_FOCUS,65,95,23,14,ES_AUTOHSCROLL
+    LTEXT           "Result img:",IDC_STATIC,14,154,36,8
+    LTEXT           "-1",IDC_STATIC_PF_IMG,54,154,29,8
+    LTEXT           "Time:",IDC_STATIC,14,167,18,8
+    LTEXT           "-1",IDC_STATIC_PF_TIME,40,167,24,8
+    LTEXT           "ms",IDC_STATIC,69,167,10,8
+    GROUPBOX        "2. Measure using Energy of LP filtered img grad",IDC_STATIC,338,7,165,94
+    PUSHBUTTON      "Scan",IDC_BUTTON_ENERGY_LP_SCAN_ALL,366,29,27,14
+    LTEXT           "Rslt img:",IDC_STATIC,355,56,28,8
+    LTEXT           "Rslt energy:",IDC_STATIC,343,67,40,8
+    LTEXT           "-1",IDC_STATIC_ENERGY_LP_RESULT_IMG,388,56,25,8
+    LTEXT           "-1",IDC_STATIC_ENERGY_LP_RESULT_ENERGY,388,67,25,8
+    LTEXT           "Time:",IDC_STATIC,365,78,18,8
+    LTEXT           "-1",IDC_STATIC_ENERGY_LP_TIME,388,78,24,8
+    LTEXT           "ms",IDC_STATIC,388,88,10,8
+    GROUPBOX        "TOOLS - evaluate",IDC_STATIC,338,104,165,57
+    PUSHBUTTON      "Load Img...",IDC_BUTTON_TOOL_LOAD_IMG,342,116,45,14
+    PUSHBUTTON      "Edge detect",IDC_BUTTON_TOOL_EDGE_DETECT,398,116,45,14,WS_DISABLED
+    CONTROL         "previous",IDC_CHECK_IMG_SET_PREVIOUS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,291,13,43,10
+    PUSHBUTTON      "Line Detect",IDC_BUTTON_TOOL_LINE_DETECT,455,116,45,14
+    LTEXT           "->",IDC_STATIC,389,119,9,8
+    LTEXT           "->",IDC_STATIC,445,119,9,8
+    LTEXT           "Thr:",IDC_STATIC,458,136,14,8
+    EDITTEXT        IDC_EDIT_TOOL_LINE_DETECT_THR,474,133,22,14,ES_AUTOHSCROLL
+    LTEXT           "Num of Detected Lines:",IDC_STATIC,397,149,76,8
+    LTEXT           "-1",IDC_STATIC_N_DETECTED_LINES,477,149,19,8
+    GROUPBOX        "Scan all",IDC_STATIC,361,16,38,34
+    GROUPBOX        "Local maxima",IDC_STATIC,419,16,79,81
+    LTEXT           "winH:",IDC_STATIC,448,28,19,8
+    LTEXT           "winW:",IDC_STATIC,446,41,21,8
+    LTEXT           "centerExp:",IDC_STATIC,431,54,36,8
+    LTEXT           "centerFocus:",IDC_STATIC,425,68,43,8
+    EDITTEXT        IDC_EDIT_MEASURE_ENERGY_LOCAL_MAXIMA_WIN_HEIGHT,470,24,23,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_MEASURE_ENERGY_LOCAL_MAXIMA_WIN_WIDTH,470,38,23,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_MEASURE_ENERGY_LOCAL_MAXIMA_CENTER_EXP,470,51,23,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_MEASURE_ENERGY_LOCAL_MAXIMA_CENTER_FOCUS,470,64,23,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Scan",IDC_BUTTON_MEASURE_ENERGY_LOCAL_MAXIMA,433,80,52,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "TODO: <Company name>"
+            VALUE "FileDescription", "TODO: <File description>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "081226_camera_param_PF.exe"
+            VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
+            VALUE "OriginalFilename", "081226_camera_param_PF.exe"
+            VALUE "ProductName", "TODO: <Product name>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_MY081226_CAMERA_PARAM_PF_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 503
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 179
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\My081226_camera_param_PF.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
